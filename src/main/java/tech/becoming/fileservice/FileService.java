@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import sun.security.krb5.internal.ktab.KeyTab;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Service
 public class FileService {
@@ -32,5 +33,9 @@ public class FileService {
             throw new Exception("Could not store file " + fileName + ". Please try again!", ex);
         }
 
+    }
+
+    public Optional<File> get(String fileId) {
+        return fileRepository.findById(fileId);
     }
 }

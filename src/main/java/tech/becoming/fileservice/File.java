@@ -10,8 +10,8 @@ import javax.persistence.Lob;
 @Entity
 public class File {
 
-    private final String fileName;
-    private final String contentType;
+    private String fileName;
+    private String contentType;
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -20,6 +20,10 @@ public class File {
 
     @Lob
     private byte[] data;
+
+    @SuppressWarnings("unused")
+    public File() {
+    }
 
     public File(String fileName, String contentType, byte[] data) {
 
