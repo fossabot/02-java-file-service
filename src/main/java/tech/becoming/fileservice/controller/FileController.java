@@ -11,6 +11,8 @@ import tech.becoming.fileservice.entity.File;
 import tech.becoming.fileservice.repository.FileRepository;
 import tech.becoming.fileservice.service.FileService;
 
+import java.io.IOException;
+
 @RestController
 @RequestMapping("file")
 public class FileController {
@@ -24,7 +26,7 @@ public class FileController {
     @PostMapping(
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.TEXT_PLAIN_VALUE)
-    public String createFile(@RequestBody File newFile) throws Exception {
+    public String createFile(@RequestBody File newFile) {
 
         return fileService.save(newFile).getId();
     }
@@ -34,18 +36,18 @@ public class FileController {
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
             produces = MediaType.TEXT_PLAIN_VALUE)
     public String uploadFile(@PathVariable String id,
-                             @RequestParam("content") MultipartFile fileContent) throws Exception {
+                             @RequestParam("content") MultipartFile fileContent) throws IOException {
 
         return fileService.setData(id, fileContent.getBytes()).getId();
     }
 
     @GetMapping(value = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public File getFile(@PathVariable String id) throws Exception {
+    public File getFile(@PathVariable String id) {
         return fileService.findById(id);
     }
 
     @GetMapping(value = "{id}", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
-    public ResponseEntity<Resource> downloadFile(@PathVariable String id) throws Exception {
+    public ResponseEntity<Resource> downloadFile(@PathVariable String id) {
         final File file = fileService.findById(id);
 
         return createDownloadResponse(file);

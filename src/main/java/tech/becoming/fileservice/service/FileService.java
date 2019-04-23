@@ -2,6 +2,8 @@ package tech.becoming.fileservice.service;
 
 import org.springframework.stereotype.Service;
 import tech.becoming.fileservice.entity.File;
+import tech.becoming.fileservice.exception.BadRequestException;
+import tech.becoming.fileservice.exception.NotFoundException;
 import tech.becoming.fileservice.repository.FileRepository;
 
 @Service
@@ -11,34 +13,32 @@ public class FileService {
 
     public FileService(FileRepository fileRepository) {this.fileRepository = fileRepository;}
 
-
-
-    public File setData(String id, byte[] bytes) throws Exception {
+    public File setData(String id, byte[] bytes) {
         final File file = fileRepository
                 .findById(id)
-                .orElseThrow(() -> new Exception("Not found"));
+                .orElseThrow(NotFoundException::new);
 
         file.setData(bytes);
 
         return fileRepository.save(file);
     }
 
-    public File findById(String id) throws Exception {
+    public File findById(String id) {
         final File file = fileRepository
                 .findById(id)
-                .orElseThrow(() -> new Exception("Not found"));
+                .orElseThrow(NotFoundException::new);
 
         file.setData(null);
 
         return file;
     }
 
-    public File save(File newFile) throws Exception {
+    public File save(File newFile) {
         if(isNewFileValid(newFile)) {
             return fileRepository.save(newFile);
         }
 
-        throw new Exception("The file information is not valid");
+        throw new BadRequestException();
     }
 
     private boolean isNewFileValid(File newFile) {
