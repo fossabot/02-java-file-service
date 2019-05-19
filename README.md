@@ -8,9 +8,11 @@ A service capable of saving and serving files. It exposes a REST interface for i
 
 ### Learning and Docs
 
+You can proceed on learning the materials from this repository assuming that you know already [01-java-notification-service](https://github.com/becoming/01-java-notification-service)
+
 Please refer to the [Wiki section](https://github.com/becoming/file-service/wiki) of this repository for a complete guide on how to build this application step by step and learn the required technologies along the way.
 
-[the Becoming's YouTube Playlist](https://www.youtube.com/playlist?list=PLPkoWZmDIKwBAPN1iBNcRMz_XpruiJ27p)
+[YouTube Playlist](https://www.youtube.com/playlist?list=PLPkoWZmDIKwBAPN1iBNcRMz_XpruiJ27p)
 
 ### Setup
 
