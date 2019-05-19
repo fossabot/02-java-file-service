@@ -40,3 +40,12 @@ mvn spring-boot:run
 You can download a build of this service from our [Bintray repository.](https://bintray.com/beta/#/becoming/m2/)
 
 You can use maven as well by using the instructions from **Set me up** button, (_top right_)
+
+## Self testing
+
+In order to test if you learned well the things so far try to do the following apps:
+
+1. Save files on local drive
+    - via dedicated route: /file-local-storage/
+1. Save files in memory
+    - via dedicated route: /file-in-memory/
