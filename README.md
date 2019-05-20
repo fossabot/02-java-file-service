@@ -2,8 +2,9 @@
 
 [![Build Status](https://travis-ci.org/becoming/02-java-file-service.svg?branch=master)](https://travis-ci.org/becoming/02-java-file-service)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4deac811aeda56ad3743/maintainability)](https://codeclimate.com/github/becoming/02-java-file-service/maintainability)
- [ ![Download](https://api.bintray.com/packages/becoming/m2/file-service/images/download.svg) ](https://bintray.com/becoming/m2/file-service/_latestVersion) 
- 
+[ ![Download](https://api.bintray.com/packages/becoming/m2/file-service/images/download.svg) ](https://bintray.com/becoming/m2/file-service/_latestVersion) 
+[![Gitter](https://badges.gitter.im/becoming-tech/community.svg)](https://gitter.im/becoming-tech/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 A service capable of saving and serving files. It exposes a REST interface for interaction.
 [Official website](https://becoming.tech)
 
