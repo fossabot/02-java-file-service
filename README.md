@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/becoming/02-java-file-service.svg?branch=master)](https://travis-ci.org/becoming/02-java-file-service)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4deac811aeda56ad3743/maintainability)](https://codeclimate.com/github/becoming/02-java-file-service/maintainability)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbecoming%2F02-java-file-service.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbecoming%2F02-java-file-service?ref=badge_shield)
 [ ![Download](https://api.bintray.com/packages/becoming/m2/file-service/images/download.svg) ](https://bintray.com/becoming/m2/file-service/_latestVersion) 
 [![Gitter](https://badges.gitter.im/becoming-tech/community.svg)](https://gitter.im/becoming-tech/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
@@ -51,3 +52,6 @@ In order to test if you learned well the things so far try to do the following a
     - via dedicated route: /file-local-storage/
 1. Save files in memory
     - via dedicated route: /file-in-memory/
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbecoming%2F02-java-file-service.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbecoming%2F02-java-file-service?ref=badge_large)
